@@ -14,6 +14,7 @@ public class Picture
     private Circle sun1;
     private Circle sun2;
     private Square sky;
+    private Square sand;
     private Square walls;
     private Triangle door;
     private Circle roof;
@@ -67,17 +68,17 @@ public class Picture
             sand.moveHorizontal(-340);
             sand.makeVisible();
             
-            door.changeColor("magenta");
-            door.changeSize(45, 60);
-            door.moveHorizontal(-210);
-            door.moveVertical(84);
-            door.makeVisible();
-            
             walls.changeColor("red");
             walls.changeSize(119);
             walls.moveVertical(30);
             walls.moveHorizontal(-210);
             walls.makeVisible();
+            
+            door.changeColor("magenta");
+            door.changeSize(45, 60);
+            door.moveHorizontal(-50);
+            door.moveVertical(84);
+            door.makeVisible();
 
             roof.changeColor("red");
             roof.changeSize(119);
@@ -101,8 +102,8 @@ public class Picture
         sun1.changeColor("white");
         sun2.changeColor("white");
         sand.changeColor("black");
-        door.changeColor("black");
         walls.changeColor("white");
+        door.changeColor("black");
         roof.changeColor("white");
         luke.changeColor("white");
         blackandwhite = true;
@@ -117,8 +118,8 @@ public class Picture
         sun1.changeColor("yellow");
         sun2.changeColor("yellow");
         sand.changeColor("yellow");
-        door.changeColor("magenta");
         walls.changeColor("red");
+        door.changeColor("magenta");
         roof.changeColor("red");
         luke.changeColor("black");
         blackandwhite = false;
