@@ -11,22 +11,31 @@
  */
 public class Picture
 {
-    private Square wall;
-    private Square window;
-    private Triangle roof;
-    private Circle sun;
+    private Circle sun1;
+    private Circle sun2;
+    private Square sky;
+    private Square walls;
+    private Triangle door;
+    private Circle roof;
+    private Person luke;
     private boolean drawn;
+    private boolean blackandwhite;
 
     /**
      * Constructor for objects of class Picture
      */
     public Picture()
     {
-        wall = new Square();
-        window = new Square();
-        roof = new Triangle();  
-        sun = new Circle();
+        sun1 = new Circle();
+        sun2 = new Circle();
+        sky = new Square();
+        sand = new Square();
+        walls = new Square();
+        door = new Triangle();
+        roof = new Circle();
+        luke = new Person();
         drawn = false;
+        blackandwhite = false;
     }
 
     /**
@@ -35,27 +44,50 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.makeVisible();
+            sky.changeColor("blue");
+            sky.changeSize(650);
+            sky.moveVertical(-150);
+            sky.moveHorizontal(-325);
+            sky.makeVisible();
+
+            sun1.changeColor("yellow");
+            sun1.moveHorizontal(150);
+            sun1.moveVertical(-40);
+            sun1.changeSize(80);
+            sun1.makeVisible();
+
+            sun2.changeColor("yellow");
+            sun2.moveHorizontal(50);
+            sun2.moveVertical(-60);
+            sun2.makeVisible();
             
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
-    
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
+            sand.changeColor("yellow");
+            sand.changeSize(650);
+            sand.moveVertical(100);
+            sand.moveHorizontal(-340);
+            sand.makeVisible();
+            
+            door.changeColor("magenta");
+            door.changeSize(45, 60);
+            door.moveHorizontal(-210);
+            door.moveVertical(84);
+            door.makeVisible();
+            
+            walls.changeColor("red");
+            walls.changeSize(119);
+            walls.moveVertical(30);
+            walls.moveHorizontal(-210);
+            walls.makeVisible();
+
+            roof.changeColor("red");
+            roof.changeSize(119);
+            roof.moveHorizontal(-130);
+            roof.moveVertical(9);
             roof.makeVisible();
-    
-            sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
-            sun.changeSize(80);
-            sun.makeVisible();
+
+            luke.moveVertical(40);
+            luke.makeVisible();
+            
             drawn = true;
         }
     }
@@ -65,10 +97,15 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
-        window.changeColor("white");
-        roof.changeColor("black");
-        sun.changeColor("black");
+        sky.changeColor("black");
+        sun1.changeColor("white");
+        sun2.changeColor("white");
+        sand.changeColor("black");
+        door.changeColor("black");
+        walls.changeColor("white");
+        roof.changeColor("white");
+        luke.changeColor("white");
+        blackandwhite = true;
     }
 
     /**
@@ -76,9 +113,14 @@ public class Picture
      */
     public void setColor()
     {
-        wall.changeColor("red");
-        window.changeColor("black");
-        roof.changeColor("green");
-        sun.changeColor("yellow");
+        sky.changeColor("blue");
+        sun1.changeColor("yellow");
+        sun2.changeColor("yellow");
+        sand.changeColor("yellow");
+        door.changeColor("magenta");
+        walls.changeColor("red");
+        roof.changeColor("red");
+        luke.changeColor("black");
+        blackandwhite = false;
     }
 }
