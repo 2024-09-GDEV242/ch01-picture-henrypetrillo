@@ -1,13 +1,10 @@
 /**
- * This class represents a simple picture. You can draw the picture using
- * the draw method. But wait, there's more: being an electronic picture, it
- * can be changed. You can set it to black-and-white display and back to
+ * This class is a creation of Tatooine. You can draw the picture using
+ * the draw method.You can set it to black-and-white display and back to
  * colors (only after it's been drawn, of course).
- *
- * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael Kšlling and David J. Barnes
- * @version 2016.02.29
+ * @author  Henry Petrillo
+ * @version 22024.09.04
  */
 public class Picture
 {
